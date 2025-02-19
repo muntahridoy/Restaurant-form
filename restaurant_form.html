@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Restaurant Reservation Form</title>
+ <script src="https://cdn.tailwindcss.com"></script>
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css">
+ <style>
+  .form-container input,
+  .form-container textarea {
+   border: 1px solid #4c00ff;
+  }
+ </style>
+</head>
+<body class="flex items-center justify-center min-h-screen">
+ <div class="form-container max-w-[600px] bg-[rgba(136,84,16,0.712)] p-5 rounded-lg shadow-[0px_4px_10px_rgba(50,51,3,0.959)] border-t-4 border-[#3937df]">
+  <h2 class="text-2xl font-semibold text-blue-800 text-center mb-4">Restaurant Reservation Form</h2>
+  <form id="reservationForm">
+   <div class="grid grid-cols-2 gap-4">
+    <input type="text" placeholder="First" class="form-control" required>
+    <input type="text" placeholder="Last" class="form-control" required>
+   </div>
+   <div class="grid grid-cols-2 gap-4 mt-3">
+    <input type="email" placeholder="Email" class="form-control" required>
+    <input type="tel" placeholder="***********" class="form-control" required>
+   </div>
+   <div class="grid grid-cols-2 gap-4 mt-3">
+    <input type="date" class="form-control" required>
+    <input type="time" class="form-control" required>
+   </div>
+   <input type="number" placeholder="How many persons?" class="form-control mt-3" required>
+   <textarea placeholder="Notes" class="form-control mt-3" rows="3"></textarea>
+   <button type="submit" class="w-full py-2 mt-4 rounded text-white bg-red-800">SEND</button>
+  </form>
+ </div>
+
+ <script>
+  document.getElementById('reservationForm').addEventListener('submit', function (event) {
+   event.preventDefault();
+   alert('Reservation Submitted Successfully!');
+  });
+ </script>
+</body>
+</html>
